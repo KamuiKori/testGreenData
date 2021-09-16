@@ -1,0 +1,10 @@
+.editor{
+    border-left: slateblue 2px solid;
+    display: block;
+}
+.editor span{
+    display: block;
+}
+.editor label{
+    display: block;
+}

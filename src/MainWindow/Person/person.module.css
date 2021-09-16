@@ -1,0 +1,24 @@
+.person{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.person span{
+    font-size: 18px;
+    border: slateblue 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    white-space: nowrap;
+}
+.person:hover{
+    font-size: 22px;
+    color:white;
+    cursor: pointer;
+    background-color:slateblue;
+    transition: .4s linear;
+}
+.person:hover span{
+    border: white 2px solid;
+}
