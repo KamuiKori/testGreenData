@@ -1,15 +1,17 @@
 import React from 'react';
 import Positions from "./Positions/positions";
 
+
 class Header extends React.Component {
+
     render() {
         return (
             <header className='header'>
-                <input type="text" placeholder='ФИО'/>
+                <input type="text" placeholder='ФИО' id='fullName'/>
                 <span>Должность:</span>
                 <Positions/>
                 <label htmlFor="dateOfBirth">Дата рождения:</label>
-                <input name='dateOfBirth'type="date"/>
+                <input name='dateOfBirth' type="date"/>
                 <span>Пол:</span>
                 <label htmlFor="radioMale">М</label>
                 <input type="radio" name='sexRadio' id='radioMale' value='male'/>

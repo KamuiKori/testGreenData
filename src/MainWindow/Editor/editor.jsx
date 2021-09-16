@@ -24,6 +24,7 @@ class editor extends React.Component {
                 <input name='checkbox' type="checkbox" id='status'/>
                 <br/>
                 <input type="submit" value='Добавить'/>
+                <input type="submit" value='Удалить'/>
             </div>
 
         )
