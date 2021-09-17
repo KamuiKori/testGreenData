@@ -6,9 +6,4 @@ import {Provider} from "mobx-react";
 import store from "./state/store";
 
 
-ReactDOM.render(
-  <Provider {...store}>
-          <App />
-  </Provider>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App/>,document.getElementById('root'));

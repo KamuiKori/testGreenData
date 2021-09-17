@@ -2,8 +2,10 @@ import React from 'react'
 import store from "../../state/store";
 import style from './editor.module.css'
 import Positions from "../../Header/Positions/positions";
+import {observer} from "mobx-react";
 
-class editor extends React.Component {
+@observer
+class editor extends React.Component <any> {
     state = {}
 
     render() {
@@ -23,7 +25,7 @@ class editor extends React.Component {
                 <label htmlFor="">Уволен:</label>
                 <input name='checkbox' type="checkbox" id='status'/>
                 <br/>
-                <input type="submit" value='Добавить'/>
+                <input type="submit" value='Ок'/>
                 <input type="submit" value='Удалить'/>
             </div>
 
