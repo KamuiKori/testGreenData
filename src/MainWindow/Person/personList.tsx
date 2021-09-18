@@ -10,9 +10,7 @@ class personList extends React.Component<any> {
             <div>
                 <h1> Список сотрудников</h1>
                 <div>
-                    {(this.props.persons || []).map((e:any) => <Person key={e.id} name={e.name}
-                                                               position={e.position} dateOfBirth={e.dateOfBirth}
-                                                               gender={e.gender} working={e.working}/>)}
+                    {(this.props.persons || []).map((e:any) => <Person person={e} selectPerson={this.props.selectPerson}/>)}
                 </div>
             </div>
 

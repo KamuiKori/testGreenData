@@ -10,7 +10,7 @@ class Positions extends React.Component <any> {
         return (
             <select name='positions' id='positions' onChange={this.props.onChangePos}>
                 {
-                    this.state.positions.map(e => <option key={`${e}pos`}>{e}</option>)
+                    this.state.positions.map(e => <option selected={this.props.selected === e} key={`${e}pos`}>{e}</option>)
                 }
             </select>
         )

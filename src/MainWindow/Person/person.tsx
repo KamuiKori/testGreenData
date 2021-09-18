@@ -15,19 +15,22 @@ type PersonProps = {
 
 @observer
 class Person extends React.Component<any> {
-
-    selectEmp(){
-
+    constructor(props) {
+        super(props);
+        this.state = {name: '', position: '',dateOfBirth:'',gender:'',working:false,id:null}
+    }
+    onSelect(){
+        this.props.selectPerson(this.props.person.id)
     }
 
     render() {
         return (
-            <div onClick={this.props.selectEmp} className={style.person}>
-                <span>{this.props.name} </span>
-                <span>Должность: {this.props.position} </span>
-                <span>Дата рождения: {this.props.dateOfBirth} </span>
-                <span>Пол: {this.props.gender === 'Male' ? 'М' : 'Ж'}</span>
-                <span>Уволен: {this.props.working ? 'Да' : 'Нет'}</span>
+            <div onClick={this.onSelect.bind(this)} >
+                <span>{this.props.person.name} </span>
+                <span>Должность: {this.props.person.position} </span>
+                <span>Дата рождения: {this.props.person.dateOfBirth} </span>
+                <span>Пол: {this.props.person.gender === 'Male' ? 'М' : 'Ж'}</span>
+                <span>Уволен: {this.props.person.working ? 'Да' : 'Нет'}</span>
             </div>
 
         )

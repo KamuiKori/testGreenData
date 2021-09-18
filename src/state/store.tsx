@@ -7,7 +7,7 @@ class Store {
             id: 1,
             name: 'Ivanov Ivan Ivanovich',
             position: 'Менеджер',
-            dateOfBirth: '30.01.1991',
+            dateOfBirth: '1991-06-20',
             gender: 'Male',
             working: true,
         },
@@ -15,7 +15,7 @@ class Store {
             id: 2,
             name: 'Petrov Petr Petrovich',
             position: 'Художник',
-            dateOfBirth: '22.02.1993',
+            dateOfBirth: '1993-04-18',
             gender: 'Male',
             working: true
         },
@@ -23,7 +23,7 @@ class Store {
             id: 3,
             name: 'Sidorova Olga Sergeevna',
             position: 'Дизайнер',
-            dateOfBirth: '16.03.1994',
+            dateOfBirth: '1994-02-23',
             gender: 'Female',
             working: false
         },
@@ -36,6 +36,11 @@ class Store {
     @action
     editPerson(index, person){
         this.persons[index] = person
+    }
+    @action
+    deletePerson(id){
+        this.persons = this.persons.filter(person => person.id != id )
+
     }
 
 }
