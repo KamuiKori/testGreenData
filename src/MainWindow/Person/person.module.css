@@ -15,10 +15,12 @@
 .person:hover span{
     border: white 2px solid;
 }
-.active{
+.activePerson{
     font-size: 22px;
     color:white;
     cursor: pointer;
     background-color:slateblue;
     transition: .4s linear;
+    border: 1px solid white;
+    border-radius: 6px;
 }

@@ -2,17 +2,6 @@ import React from 'react'
 import style from './person.module.css'
 import {observer} from "mobx-react";
 
-
-type PersonProps = {
-    name: string,
-    position: string,
-    dateOfBirth: string,
-    gender: string,
-    working: boolean,
-}
-
-
-
 @observer
 class Person extends React.Component<any> {
     constructor(props) {
@@ -25,11 +14,11 @@ class Person extends React.Component<any> {
 
     render() {
         return (
-            <div onClick={this.onSelect.bind(this)} >
+            <div onClick={this.onSelect.bind(this)} className={style.activePerson}>
                 <span>{this.props.person.name} </span>
                 <span>Должность: {this.props.person.position} </span>
                 <span>Дата рождения: {this.props.person.dateOfBirth} </span>
-                <span>Пол: {this.props.person.gender === 'Male' ? 'М' : 'Ж'}</span>
+                <span>Пол: {this.props.person.gender === 'Male' ? 'М ' : 'Ж '}</span>
                 <span>Уволен: {this.props.person.working ? 'Да' : 'Нет'}</span>
             </div>
 

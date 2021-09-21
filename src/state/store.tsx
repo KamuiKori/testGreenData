@@ -10,6 +10,7 @@ class Store {
             dateOfBirth: '1991-06-20',
             gender: 'Male',
             working: true,
+            active:false
         },
         {
             id: 2,
@@ -17,7 +18,8 @@ class Store {
             position: 'Художник',
             dateOfBirth: '1993-04-18',
             gender: 'Male',
-            working: true
+            working: true,
+            active:false
         },
         {
             id: 3,
@@ -25,7 +27,8 @@ class Store {
             position: 'Дизайнер',
             dateOfBirth: '1994-02-23',
             gender: 'Female',
-            working: false
+            working: false,
+            active:false
         },
     ]
 
